@@ -48,3 +48,6 @@ modules/contrib
 themes/contrib
 profile/contrib
 
+# IDE
+.idea
+.vscode
