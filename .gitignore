@@ -1,2 +1,9 @@
+# Composer managed dependencies
 vendor
+
+# Temp files
 tmp
+
+# IDE
+.idea
+.vscode
