@@ -1,0 +1,4 @@
+themes/**/*.css
+!themes/**/*.scss.css
+themes/vero/**/*.css
+!themes/olivero/**/*.pcss.css

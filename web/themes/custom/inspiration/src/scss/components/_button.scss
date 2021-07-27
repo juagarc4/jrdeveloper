@@ -1,0 +1,156 @@
+//
+// Buttons
+// --------------------------------------------------
+
+// Base styles
+// --------------------------------------------------
+
+%button {
+  display: inline-block;
+  margin-bottom: 0; // For input.btn
+  font-weight: 500;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  border: 1px solid transparent;
+  white-space: nowrap;
+  user-select: none;
+
+  @include button-size($padding-base-vertical, $padding-base-horizontal, $font-size-base, $line-height-base, $btn-border-radius-base);
+
+  &,
+  &:active,
+  &.active {
+    &:focus,
+    &.focus {
+      @include tab-focus;
+    }
+  }
+
+  &:active,
+  &.active {
+    outline: 0;
+    background-image: none;
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    cursor: $cursor-disabled;
+    opacity: 0.65;
+  }
+
+  a & {
+    &.disabled,
+    fieldset[disabled] & {
+      pointer-events: none; // Future-proof disabling of clicks on `<a>` elements
+    }
+  }
+
+  // [converter] extracted a& to a.btn
+}
+
+// Alternate buttons
+// --------------------------------------------------
+
+%btn-primary {
+  @include button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
+
+  color: $btn-default-color;
+
+  &:link,
+  &:hover,
+  &:visited,
+  &:focus,
+  &.focus {
+    color: $btn-default-color;
+    text-decoration: none;
+  }
+}
+
+%btn-secondary {
+  @include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
+
+  color: $btn-secondary-color;
+
+  &:link,
+  &:hover,
+  &:visited,
+  &:focus,
+  &.focus {
+    color: $btn-default-color;
+    text-decoration: none;
+  }
+}
+
+// Link buttons
+// -------------------------
+
+// Make a button look and behave like a link
+%btn-link {
+  color: $link-color;
+  font-weight: normal;
+  border-radius: 0;
+
+  &,
+  &:active,
+  &.active,
+  &[disabled],
+  fieldset[disabled] & {
+    background-color: transparent;
+  }
+
+  &,
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: transparent;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: transparent;
+  }
+
+  &[disabled],
+  fieldset[disabled] & {
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+}
+
+// Block button
+// --------------------------------------------------
+
+%btn-block {
+  display: block;
+  width: 100%;
+}
+
+.button {
+  @extend %button;
+}
+
+.button--primary {
+  @extend %btn-primary;
+}
+
+.button--secondary {
+  @extend %btn-secondary;
+}
+
+.button--block {
+  @extend %btn-block;
+}
+
+.button--link {
+  @extend %btn-link;
+}
+
+.button--no-margin {
+  margin: 0;
+}

@@ -1,0 +1,6 @@
+.layout-content {
+  @include container-fixed();
+
+  max-width: $max-content-width;
+  line-height: 22px;
+}

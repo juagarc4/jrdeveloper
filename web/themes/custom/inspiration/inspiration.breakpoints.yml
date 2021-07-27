@@ -1,0 +1,23 @@
+readyto.screen-xs:
+  label: 1/3 Width Image
+  mediaQuery: ''
+  weight: 0
+  multipliers:
+   - 1x
+   - 2x
+
+readyto.screen-sm:
+  label: 2/3 Width Image
+  mediaQuery: ''
+  weight: 1
+  multipliers:
+    - 1x
+    - 2x
+
+readyto.screen-md:
+  label: Full Width Images
+  mediaQuery: ''
+  weight: 2
+  multipliers:
+    - 1x
+    - 2x

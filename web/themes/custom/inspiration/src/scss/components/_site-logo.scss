@@ -1,0 +1,38 @@
+.site-logo {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  @media screen and (min-width: $screen-sm) {
+    right: 10px;
+    top: 0;
+  }
+
+  img {
+    height: 70px;
+    transform: translateX(-25%);
+
+    @media screen and (min-width: $screen-sm) {
+      height: 90px;
+      transform: none;
+    }
+  }
+  &__title{
+    margin-left: 1em;
+  }
+}
+
+.logo-container {
+  @include container-fixed;
+
+  max-width: $max-content-width;
+  position: relative;
+
+  a:link {
+    text-decoration: none;
+  }
+}

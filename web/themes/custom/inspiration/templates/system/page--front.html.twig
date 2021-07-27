@@ -1,0 +1,121 @@
+<header class="header" role="banner">
+  <div class="header-top"> 
+    <div class="container">
+      {{ page.header_top }}
+    </div>
+  </div>
+
+  <div class="header-nav container">
+    {{ page.header }}
+  </div>
+</header>
+
+
+<main role="main" class="main">
+  <div class="layout-content">
+     <div class="container">
+
+       <div class="category cms-fwk">
+         <a href="cms_fwk" title="Ver más">
+           <div class="category-data">
+             <h2 class="title line1">CMS, LMS</h2>
+             <h2 class="title line2">&</h2>
+             <h2 class="title line3">FRAMEWORKS</h2>
+           </div>
+           <div class="overlay">
+             <p>Un CMS (Content Management System) es una aplicación informática usada para crear, editar, gestionar y publicar contenido digital multimedia.</p>
+             <p>Un LMS (Learning Management System) es un CMS cuya principal aplicación es la creación de portales de E-Learning.</p>
+             <p>Un Framework es una estructura conceptual y tecnológica de soporte definido, normalmente con artefactos o módulos concretos de software, que puede servir de base para el desarrollo de software.</p>
+           </div>
+         </a>
+       </div>
+       <div class="category e-commerce">
+         <a href="e-commerce" title="Ver más">
+           <div class="category-data">
+            <h2 class="title">E-COMMERCE</h2>
+           </div>
+           <div class="overlay">
+             Sistemas de gestión de contenidos (CMS) cuya principal aplicación es la creación de tiendas online de comercio electrónico.
+           </div>
+         </a>
+       </div>
+       <div class="category blog">
+         <a href="blog" title="Ver más">
+           <div class="category-data">
+            <h2 class="title">BLOG</h2>
+           </div>
+           <div class="overlay">
+             <p>Un blog (contracción del inglés web log) o bitácora web es un sitio web que incluye, a modo de diario personal de su autor o autores, contenidos de su interés, actualizados con frecuencia y a menudo comentados por los lectores.</p>
+             <p>Sirve como publicación en línea de historias con una periodicidad muy alta, que son presentadas en orden cronológico inverso, es decir, lo más reciente que se ha publicado es lo primero que aparece en la pantalla.</p>
+           </div>
+         </a>
+       </div>
+       <div class="category internet-parents">
+         <a href="internet_parents" title="Ver más">
+           <div class="category-data">
+             <h2 class="title line1">INTERNET</h2>
+             <h2 class="title line2">PARA</h2>
+             <h2 class="title line3">PADRES</h2>
+           </div>
+           <div class="overlay">
+             <p>Facebook, Twitter, Youtube, Whatsapp, Snapchat, etc. Todos estos términos son completamnte desconocidos para öa mayoría de los padres. Aún más desconocidas son las aplicaciones correspondientes y, por ende, también los peligros que puede esconderse tras un uso inadecuado de estas aplicaciones.
+             Aquí intentaremos aportar algunas medidas para enseñar a nuestros hijos a protegerse de esas amenazas.</p>
+           </div>
+         </a>
+       </div>
+       <div class="category projects">
+         <a href="projects" title="Ver más">
+           <div class="category-data">
+            <h2 class="title">PROYECTOS</h2>
+           </div>
+           <div class="overlay">
+             <p>Es esta sección se presentan algunos de los proyectos que he realizado durante mi trayectoria como programador web.</p>
+             <p>Algunos proyectos son privados y otros fueron realizados de forma profesional en la empresa dónde trabajaba</p>
+           </div>
+         </a>
+       </div>
+       <div class="category programming hide">
+         <a href="programming" title="Ver más">
+           <div class="category-data">
+            <h2 class="category-title">LABORATORIO</h2>
+           </div>
+           <div class="overlay">
+             <ul>
+                <li>Experimentos y pruebas de programación.</li>
+                <li>Pruebas con otros CMS o Frameworks</li>
+                <li>Trucos</li>
+                <li>Referencias</li>
+             </ul>
+           </div>
+         </a>
+       </div>
+      </div>
+  </div>
+</main>
+
+<footer id="footer" role="contentinfo">
+  <div class="container main-footer">
+    <div class="row">
+
+      <div class="col-md-4">
+        {{ page.footer_first }}
+      </div>
+
+      <div class="col-md-8">
+        <div class="region region-footer-second">
+          {{ page.footer_second }}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer-copyright">
+    <div class="container">
+      <div class="row">
+        <p>@ {{ "now"|date("Y") }} Diseñado por <a title="Contáctanos" href="/contact">JRDeveloper</a></p>
+      </div>
+    </div>
+  </div>
+
+</footer>

@@ -42,3 +42,11 @@ modules/contrib
 themes/contrib
 profile/contrib
 
+/example.gitignore
+
+# Testing configurations
+phpunit.xml
+phpcs.xml
+
+# Cache files
+*.cache

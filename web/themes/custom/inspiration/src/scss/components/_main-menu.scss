@@ -1,0 +1,12 @@
+.main-menu {
+  @include container-fixed;
+
+  max-width: $max-content-width;
+  display: flex;
+}
+
+.menu {
+  &--account {
+    margin: 0 0 0 10px;
+  }
+}

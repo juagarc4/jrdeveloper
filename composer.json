@@ -16,9 +16,15 @@
     ],
     "require": {
         "composer/installers": "^1.9",
-        "drupal/core-composer-scaffold": "^9.1",
-        "drupal/core-project-message": "^9.1",
-        "drupal/core-recommended": "^9.1"
+        "cweagans/composer-patches": "^1.7",
+        "drupal/admin_toolbar": "^3.0",
+        "drupal/core-composer-scaffold": "^9.0",
+        "drupal/core-recommended": "^9.0",
+        "drupal/decoupled_router": "^2.0",
+        "drupal/jsonapi_extras": "^3.17",
+        "drupal/jsonapi_menu_items": "^1.2",
+        "drupal/jsonapi_resources": "1.x-dev",
+        "drush/drush": "^10.4"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -83,6 +89,45 @@
                 "  * Remove the plugin that prints this message:",
                 "      composer remove drupal/core-project-message"
             ]
+        },
+        "enable-patching": true,
+        "patches": {
+            "drupal/jsonapi_resources": {
+                "3185656-Argument 2 passed to Drupal\\jsonapi_search_api\\Resource\\IndexResource::process()": "patches/jsonapi-search-api-null-index.patch"
+            }
+        },
+        "drush": {
+            "services": {
+                "drush.services.yml": "^9"
+            }
         }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Drupal\\Tests\\Behat\\Context\\": "testing/behat/context"
+        }
+    },
+    "require-dev": {
+        "behat/behat": "^3.8",
+        "behat/mink": "^1.8",
+        "behat/mink-goutte-driver": "^1.2",
+        "behat/mink-selenium2-driver": "^1.4",
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
+        "drupal/coder": "^8.3",
+        "drupal/devel": "^4.1",
+        "drupal/drupal-extension": "^4.1",
+        "drupal/twig_vardumper": "^3.0",
+        "jcalderonzumba/gastonjs": "^1.2",
+        "jcalderonzumba/mink-phantomjs-driver": "~0.3.1",
+        "mglaman/phpstan-drupal": "^0.12.8",
+        "mikey179/vfsstream": "^1.6",
+        "phpcompatibility/php-compatibility": "^9.3",
+        "phpdocumentor/reflection-docblock": "^5.2",
+        "phpspec/prophecy-phpunit": "^2.0",
+        "phpstan/extension-installer": "^1.1",
+        "phpstan/phpstan-deprecation-rules": "^0.12.6",
+        "phpunit/phpunit": "^9.5",
+        "symfony/css-selector": "^5.2",
+        "symfony/phpunit-bridge": "^5.2"
     }
 }

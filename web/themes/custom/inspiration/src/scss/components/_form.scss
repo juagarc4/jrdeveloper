@@ -1,0 +1,77 @@
+.comment-form {
+  border: 1px solid #ccc;
+  padding: 5px 20px;
+  border-radius: 6px;
+}
+
+.input-label {
+  display: block;
+  margin: 5px;
+}
+
+.input {
+  box-sizing: border-box;
+  max-width: 100%;
+
+  &--file {
+    visibility: hidden;
+    position: absolute;
+  }
+
+  &--number,
+  &--text,
+  &--password,
+  &--email,
+  &--textarea {
+    background: $white;
+    padding: 10px;
+    border: 1px solid #b3b3b3;
+    border-radius: 6px;
+    width: 100%;
+  }
+}
+
+.form-textarea-wrapper {
+  .counter {
+    margin: 5px;
+  }
+}
+
+.form-textarea {
+  background: $white;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.js input.form-autocomplete {
+  background-position: 98% center;
+}
+
+// ck-editor
+
+.form-wrapper .cke_chrome {
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  overflow: hidden;
+  border: none;
+
+  .cke_contents {
+    border: 1px solid #b3b3b3;
+    border-radius: 6px;
+  }
+
+  .cke_reset_all,
+  .cke_reset_all *,
+  .cke_reset_all a,
+  .cke_reset_all textarea,
+  a.cke_path_item,
+  span.cke_path_empty {
+    font-family: smart;
+  }
+
+  .cke_top,
+  .cke_bottom {
+    border: none;
+    background: transparent;
+  }
+}

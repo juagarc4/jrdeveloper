@@ -1,0 +1,7 @@
+# This file exists in order to mantain the
+# empty directory in the git repo.
+
+# The gulpfile of the parent directory
+# will place here the js files
+
+*.js

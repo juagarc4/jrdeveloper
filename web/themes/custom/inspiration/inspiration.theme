@@ -1,0 +1,52 @@
+<?php
+
+
+/**
+ * Implements hook_page_attachments_alter().
+ *
+ * @see template_preprocess_maintenance_page()
+ * @see \Drupal\Core\EventSubscriber\ActiveLinkResponseFilter
+ */
+/*function inspiration_page_attachments_alter(array &$page) {
+  $viewport = [
+    '#type' => 'html_tag',
+    '#tag' => 'meta',
+    '#attributes' => [
+      'name' => 'viewport',
+      'content' => 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no',
+    ],
+  ];
+  $page['#attached']['html_head'][] = [$viewport, 'viewport'];
+}*/
+
+/**
+ * Implements hook_preprocess_block() for block templates.
+ */
+function inspiration_preprocess_block(&$variables) {
+
+  switch ($variables['base_plugin_id']) {
+    case 'system_branding_block':
+      $variables['site_logo'] = '';
+      if ($variables['content']['site_logo']['#access'] && $variables['content']['site_logo']['#uri']) {
+        $variables['site_logo'] = str_replace('.svg', '.png', $variables['content']['site_logo']['#uri']);
+      }
+      break;
+  }
+}
+
+function _inspiration_comment_count($id){
+  $db = \Drupal::service('database');
+  $count = $db->query("SELECT comment_count FROM comment_entity_statistics WHERE entity_id = :id", array(':id' => $id))->fetchField();
+
+  return empty($count) ? '0' : $count;
+}
+
+function _inspiration_plural($count, $singular, $plural){
+
+  if ($count == 1) {
+    return $count . ' ' . t("@s", array("@s" => $singular));
+  } else {
+    return $count . ' ' . t("@s", array("@s" => $plural));
+  }
+}
+

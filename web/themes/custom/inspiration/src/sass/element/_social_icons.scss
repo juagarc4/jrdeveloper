@@ -1,0 +1,43 @@
+// Social Icons
+.social-icons {
+  margin: 0;
+  padding: 0;
+  width: auto;
+
+  > li {
+    display: inline-block;
+    list-style: none;
+    margin-left: 1px;
+  }
+
+  a {
+    color: $grey-400;
+    text-decoration: none;
+  }
+
+  i {
+    border-right: 1px solid $grey-100;
+    @include font-size(26px);
+    line-height: 36px;
+    width: 34px;
+  }
+
+  &:last-child {
+    border-right: 0;
+  }
+}
+
+.fa-xing:hover {
+  background: $xing;
+  color: $white;
+}
+
+.fa-linkedin:hover {
+  background: $linkedin;
+  color: $white;
+}
+
+.fa-twitter:hover {
+  background: $twitter;
+  color: $white;
+}

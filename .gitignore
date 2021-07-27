@@ -7,3 +7,7 @@ tmp
 # IDE
 .idea
 .vscode
+
+# Teting files
+behat.yml
+*.neon

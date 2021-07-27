@@ -1,0 +1,29 @@
+.social-icons {
+  float: right;
+  li {
+    float: left;
+    a {
+      display: inline-block;
+      width: 30px;
+      text-align: center;
+    }
+    i {
+      width: 34px;
+      line-height: 28px;
+      border-right: 1px solid $grey-50;
+      font-size: 16px;
+    }
+  }
+  .fa-linkedin:hover{
+    background: $linkedin;
+    color: $white;
+  }
+  .fa-twitter:hover{
+    background: $twitter;
+    color: $white;
+  }
+  .fa-xing:hover{
+    background: $xing;
+    color: $white;
+  }
+}

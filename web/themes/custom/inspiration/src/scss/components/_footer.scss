@@ -1,0 +1,38 @@
+.footer {
+  background-color: $grey-100;
+
+  &__menu-container {
+    @include container-fixed;
+
+    max-width: $max-content-width;
+  }
+
+  &__menu {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 35px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    &__item {
+      padding: 10px 0;
+
+      a {
+        font-size: 14px;
+        padding: 0 13px;
+        border-left: 1px solid $black;
+        text-decoration: none;
+      }
+
+      &:first-of-type {
+        a {
+          padding-left: 0;
+          border-left: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.link-list {
+  &__container {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__item {
+    padding: 0;
+    display: inline-block;
+    margin: 0 16px 0 0;
+  }
+}

@@ -1,0 +1,59 @@
+$font-path: '../fonts/';
+
+@for $i from 1 through length($font-data) {
+  @font-face {
+    font-family: nth(map-get($font-data, $i), 1);
+    font-weight: nth(map-get($font-data, $i), 2);
+    font-style: nth(map-get($font-data, $i), 3);
+    src: url('#{$font-path}#{nth(map-get($font-data, $i), 4)}.eot');
+    src:
+            url('#{$font-path}#{nth(map-get($font-data, $i), 4)}.eot?#iefix') format('embedded-opentype'),
+            url('#{$font-path}#{nth(map-get($font-data, $i), 4)}.woff') format('woff'),
+            url('#{$font-path}#{nth(map-get($font-data, $i), 4)}.ttf') format('truetype'),
+            url('#{$font-path}#{nth(map-get($font-data, $i), 4)}.svg#svgFontName') format('svg');
+  }
+}
+
+@for $i from 1 through length($font-data-icons) {
+  @font-face {
+    font-family: nth(map-get($font-data-icons, $i), 1);
+    font-weight: nth(map-get($font-data-icons, $i), 2);
+    font-style: nth(map-get($font-data-icons, $i), 3);
+    src: url('#{$font-path}#{nth(map-get($font-data-icons, $i), 4)}.eot');
+    src:
+            url('#{$font-path}#{nth(map-get($font-data-icons, $i), 4)}.eot?#iefix') format('embedded-opentype'),
+            url('#{$font-path}#{nth(map-get($font-data-icons, $i), 4)}.woff2') format('woff2'),
+            url('#{$font-path}#{nth(map-get($font-data-icons, $i), 4)}.woff') format('woff'),
+            url('#{$font-path}#{nth(map-get($font-data-icons, $i), 4)}.ttf') format('truetype'),
+            url('#{$font-path}#{nth(map-get($font-data-icons, $i), 4)}.svg#svgFontName') format('svg');
+  }
+}
+
+@for $i from 1 through length($font-slick) {
+  @font-face {
+    font-family: nth(map-get($font-slick, $i), 1);
+    font-weight: nth(map-get($font-slick, $i), 2);
+    font-style: nth(map-get($font-slick, $i), 3);
+    src: url('#{$font-path}#{nth(map-get($font-slick, $i), 4)}.eot');
+    src:
+            url('#{$font-path}#{nth(map-get($font-slick, $i), 4)}.eot?#iefix') format('embedded-opentype'),
+            url('#{$font-path}#{nth(map-get($font-slick, $i), 4)}.woff') format('woff'),
+            url('#{$font-path}#{nth(map-get($font-slick, $i), 4)}.ttf') format('truetype'),
+            url('#{$font-path}#{nth(map-get($font-slick, $i), 4)}.svg#svgFontName') format('svg');
+  }
+}
+
+@for $i from 1 through length($fontawesome) {
+  @font-face {
+    font-family: nth(map-get($fontawesome, $i), 1);
+    font-weight: nth(map-get($fontawesome, $i), 2);
+    font-style: nth(map-get($fontawesome, $i), 3);
+    src: url('#{$font-path}#{nth(map-get($fontawesome, $i), 4)}.eot');
+    src:
+            url('#{$font-path}#{nth(map-get($fontawesome, $i), 4)}.eot?#iefix') format('embedded-opentype'),
+            url('#{$font-path}#{nth(map-get($fontawesome, $i), 4)}.woff2') format('woff2'),
+            url('#{$font-path}#{nth(map-get($fontawesome, $i), 4)}.woff') format('woff'),
+            url('#{$font-path}#{nth(map-get($fontawesome, $i), 4)}.ttf') format('truetype'),
+            url('#{$font-path}#{nth(map-get($fontawesome, $i), 4)}.svg#svgFontName') format('svg');
+  }
+}

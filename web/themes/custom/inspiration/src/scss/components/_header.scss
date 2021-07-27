@@ -1,0 +1,22 @@
+/* Header */
+.header {
+  background: #FFFFFF;
+  border-bottom: 1px solid #e5e5e5;
+  position: relative;
+  z-index: 200;
+
+  &--top {
+    @include container-fixed;
+
+    max-width: $max-content-width;
+    height: 30px;
+    border-bottom: 1px solid $grey-300;
+    border-top: 2px solid $orange-500;
+  }
+  &--bottom{
+    @include container-fixed;
+
+    max-width: $max-content-width;
+  }
+}
+

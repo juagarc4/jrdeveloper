@@ -1,0 +1,257 @@
+{#
+/**
+ * @file
+ * Theme override to display a single page.
+ *
+ * The doctype, html, head and body tags are not in this template. Instead they
+ * can be found in the html.html.twig template in this directory.
+ *
+ * Available variables:
+ *
+ * General utility variables:
+ * - base_path: The base URL path of the Drupal installation. Will usually be
+ *   "/" unless you have installed Drupal in a sub-directory.
+ * - is_front: A flag indicating if the current page is the front page.
+ * - logged_in: A flag indicating if the user is registered and signed in.
+ * - is_admin: A flag indicating if the user has permission to access
+ *   administration pages.
+ *
+ * Site identity:
+ * - front_page: The URL of the front page. Use this instead of base_path when
+ *   linking to the front page. This includes the language domain or prefix.
+ *
+ * Page content (in order of occurrence in the default page.html.twig):
+ * - node: Fully loaded node, if there is an automatically-loaded node
+ *   associated with the page and the node ID is the second argument in the
+ *   page's path (e.g. node/12345 and node/12345/revisions, but not
+ *   comment/reply/12345).
+ *
+ * Regions:
+ * - page.page.header_top: Items for the header top region
+ * - page.header: Items for the header region
+ * - page.help: Dynamic help text, mostly for admin pages.
+ * - page.primary_menu: Items for the primary menu region.
+ * - page.secondary_menu: Items for the secondary menu region.
+ * - page.page_top: Items for the page top region.
+ * - page.page_bottom: Items for the page bottom region.
+ * - page.highlighted: Items for the highlighted region.
+ * - page.headline: Items for the headline region.
+ * - page.breadcrumb: Items for the breadcrumb region.
+ * - page.before_content: Items for the before_content region.
+ * - page.content: The main content of the current page.
+ * - page.sidebar_first: Items for the first sidebar.
+ * - page.sidebar_second: Items for the second sidebar.
+ * - page.after_content: Items for the breadcrumb region.
+ * - page.footer_first: Items for the first footer region.
+ * - page.footer_second: Items for the second footer region.
+ * - page.footer_third: Items for the third footer region.
+ * - page.footer_bottom_left: Items for the left side of nthe footer at bottom.
+ * - page.footer_bottom_right: Items for the right side of nthe footer at bottom.
+ *
+ * @see template_preprocess_page()
+ * @see html.html.twig
+ */
+#}
+
+<header class="header" role="banner">
+  <div class="header--top">
+    <div class="container">
+        {{ page.header_top }}
+    </div>
+  </div>
+  <div class="header--bottom container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main">
+        <i class="fa fa-bars"></i>
+      </button>
+
+      <h1 class="logo">
+        <a href="index.html" title="Home" rel="home" id="logo">
+          <img src="img/logo.png" alt="Home">
+        </a>
+      </h1>
+    </div>
+    <div class="navbar-search">
+      <div class="search-icons">
+        <a class="open-form"><i class="fa fa-search"></i></a>
+        <a class="close-form"><i class="fa fa-times"></i></a>
+      </div>
+
+      <div class="region region-header-search">
+        <div class="search-block-form block" id="block-octo-search" role="search">
+
+          <form action="/search/node" method="get" id="search-block-form" accept-charset="UTF-8">
+            <div class="form-item form-type-search form-item-keys form-no-label">
+              <input title="Enter the terms you wish to search for." class="search form-search form-control" placeholder="Search" type="search" id="edit-keys" name="keys" value="" size="15" maxlength="128">
+            </div>
+            <div class="form-actions form-wrapper" id="edit-actions">
+              <input type="submit" id="edit-submit" name="" value="Search" class="button form-submit">
+            </div>
+          </form>
+
+        </div>
+      </div>
+
+    </div>
+    <div class="navbar-main navbar-collapse collapse">
+      <ul class="nav nav-pills nav-main">
+        <li><a href="index.html" class="is-active">Home</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+<section class="intro" id="section1" data-speed="5" data-type="background" style="background-position: 50% 0px;">
+  <div class="overlay">
+    <div class="headline">
+      <div class="region region-headline">
+        <div class="flexslider">
+          <ul class="slides">
+            <li>
+              <h2>Creative control</h2>
+              <p>Digital agencies have more flexibility in design.</p>
+            </li>
+            <li>
+              <h2>Custom Block Layouts</h2>
+              <p>Endless possibilities to re-use blocks.</p>
+            </li>
+            <li>
+              <h2>Twig Templates</h2>
+              <p>Bringing designers and developers closer together</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a href="#" id="goto-section2" class="arrow-down">Get started</a>
+</section>
+<main role="main" class="main">
+  <div class="layout-content">
+
+    <section id="section2" class="section">
+      <div class="container">
+
+        <div class="region region-before-content">
+
+          <div id="block-ourservices" class="block">
+            <h2 class="block-title">Drupal 8</h2>
+            <hr>
+            <p class="block-subtitle">We bring you an awesomeness of design, creative skills, thoughts, and ideas.</p>
+          </div>
+
+          <div id="block-ourfeatures" class="block">
+
+            <div class="row">
+
+              <div class="col-sm-4">
+                <div class="service">
+                  <div class="service-icon"><i class="fa fa-file-code-o"></i></div>
+                  <h4>Twig Templates</h4>
+                  <p>Donec consectetur metus eget felis commodo, ut iaculis mi dignissim. Maecenas in suscipit libero, in dictum metus</p>
+                </div>
+              </div>
+
+              <div class="col-sm-4">
+                <div class="service">
+                  <div class="service-icon"><i class="fa fa-server"></i></div>
+                  <h4>Custom Block Layouts</h4>
+                  <p>Donec consectetur metus eget felis commodo, ut iaculis mi dignissim. Maecenas in suscipit libero, in dictum metus</p>
+                </div>
+              </div>
+
+              <div class="col-sm-4">
+                <div class="service">
+                  <div class="service-icon"><i class="fa fa-mobile"></i></div>
+                  <h4>Fully responsive</h4>
+                  <p>Donec consectetur metus eget felis commodo, ut iaculis mi dignissim. Maecenas in suscipit libero, in dictum metus</p>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="row">
+
+              <div class="col-sm-4">
+                <div class="service">
+                  <div class="service-icon"><i class="fa fa-html5"></i></div>
+                  <h4>Clean modern design</h4>
+                  <p>Donec consectetur metus eget felis commodo, ut iaculis mi dignissim. Maecenas in suscipit libero, in dictum metus</p>
+                </div>
+              </div>
+
+              <div class="col-sm-4">
+                <div class="service">
+                  <div class="service-icon"><i class="fa fa-drupal"></i></div>
+                  <h4>Views in Core</h4>
+                  <p>Donec consectetur metus eget felis commodo, ut iaculis mi dignissim. Maecenas in suscipit libero, in dictum metus</p>
+                </div>
+              </div>
+
+              <div class="col-sm-4">
+                <div class="service">
+                  <div class="service-icon"><i class="fa fa-cogs"></i></div>
+                  <h4>Wysiwyg options</h4>
+                  <p>Donec consectetur metus eget felis commodo, ut iaculis mi dignissim. Maecenas in suscipit libero, in dictum metus</p>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </div>
+</main>
+<footer id="footer" role="contentinfo">
+  <div class="container main-footer">
+    <div class="row">
+      <div class="col-md-4">
+        <h2>Newsletter</h2>
+        <p>Keep up on our always evolving product features and technology. Enter your e-mail and subscribe to our newsletter.</p>
+        <form id="newsletterForm" action="" method="POST" novalidate="novalidate">
+          <div class="input-group">
+            <input class="form-control" placeholder="Email Address" name="newsletterEmail" id="newsletterEmail" type="text">
+            <span class="input-group-btn"><button class="btn btn-default" type="submit">Go!</button></span>
+          </div>
+        </form>
+      </div>
+      <div class="col-md-4">
+        <h2>About Us</h2>
+        <p>Nulla nunc dui, tristique in semper vel, congue sed ligula. Nam dolor ligula, faucibus id sodales in, auctor fringilla libero. Nulla nunc dui, tristique in semper vel. Nam dolor ligula, faucibus id sodales in, auctor fringilla libero.</p>
+      </div>
+      <div class="col-md-4">
+        <h2>Contact Us</h2>
+        <ul class="contact">
+          <li><i class="fa fa-map-marker"></i><strong>Address:</strong> 1234 Street Name, City Name, United States</li>
+          <li><i class="fa fa-phone"></i> <strong>Phone:</strong> (123) 456-7890</li>
+          <li><i class="fa fa-envelope"></i> <strong>Email:</strong><a href="mailto:mail@example.com">mail@example.com</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <p>All Rights Reserved © Octo | Designed &amp; Developed By Chaz Chumley</p>
+        </div>
+        <div class="col-md-4">
+          <ul class="social-icons">
+            <li><a class="button--icon" target="_blank" href="https://www.facebook.com/PacktPub" title=""><i class="fa fa-facebook"></i></a></li>
+            <li><a class="button--icon" target="_blank" href="https://www.linkedin.com/company/packt-publishing" title=""><i class="fa fa-linkedin"></i></a></li>
+            <li><a class="button--icon" target="_blank" href="https://twitter.com/packtpub" title=""><i class="fa fa-twitter"></i></a></li>
+            <li><a class="button--icon" target="_blank" href="https://plus.google.com/+packtpublishing/posts" title=""><i class="fa fa-google-plus"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

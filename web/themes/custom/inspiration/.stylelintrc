@@ -1,0 +1,7 @@
+{
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "max-nesting-depth": 5,
+    "at-rule-no-vendor-prefix": true
+  }
+}

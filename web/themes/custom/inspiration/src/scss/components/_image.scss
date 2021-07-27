@@ -1,0 +1,104 @@
+.images {
+  border: 1px solid $gallery-border-color;
+  background-color: $gallery-background-color;
+  border-radius: 3px;
+  margin-top: 16px;
+  margin-bottom: 0;
+
+  @media screen and (min-width: $screen-md) {
+    border-bottom: none;
+    border-radius: 3px 3px 0 0;
+  }
+
+  &.slick-slider {
+    margin-bottom: 46px;
+
+    @media screen and (min-width: $screen-md) {
+      margin-bottom: 0;
+    }
+  }
+
+  &--single {
+    border-radius: 3px;
+    border: 1px solid $gallery-border-color;
+    margin-bottom: 16px;
+  }
+}
+
+.image {
+  background-color: $gallery-background-color;
+
+  .images & {
+    padding: 16px;
+  }
+
+  img {
+    max-width: 100%;
+    display: block;
+    margin: auto;
+
+    .slick-slider & {
+      margin: auto;
+      max-width: 100%;
+      max-height: 60vh;
+    }
+  }
+
+  picture {
+    .slick-slider & {
+      min-height: 60vh;
+      max-height: 60vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.image-thumbnails {
+  border: 1px solid $gallery-border-color;
+  border-top: none;
+  background-color: $gallery-background-color;
+  border-radius: 0 0 3px 3px;
+  padding: 16px;
+  width: 100%;
+  flex-wrap: wrap;
+  display: none;
+  margin-bottom: 16px;
+
+  &::before {
+    content: '';
+    border-top: 1px solid $gallery-border-color;
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  @media screen and (min-width: $screen-md) {
+    display: flex;
+  }
+
+  &__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    max-height: 10vh;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+    &:focus {
+      background-color: $white;
+      outline: none;
+    }
+
+    picture {
+      max-width: 100%;
+      max-height: 10vh;
+    }
+
+    img {
+      max-width: calc(100% - 16px);
+      max-height: calc(100% - 16px);
+    }
+  }
+}

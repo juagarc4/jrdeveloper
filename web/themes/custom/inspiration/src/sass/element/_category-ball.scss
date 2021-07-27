@@ -1,0 +1,140 @@
+.category{
+  min-height: 420px;
+  width: 100%;
+  border: 1px solid;
+  text-align: left;
+  font-size: 2rem;
+  font-family: "jurademibold", sans-serif;
+  font-weight: 600;
+  display: inline-block;
+  background-color: white;
+  transition: box-shadow 0.5s;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 20px;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  a{
+    display: block;
+    min-height: 420px;
+    text-decoration: none;
+  }
+  span{
+    font-size: 3rem;
+  }
+  .title {
+    margin-bottom: 0;
+    font-size: 4rem;
+  }
+  .overlay{
+    color: white;
+    display: block;
+    position: absolute;
+    transition: all 0.5s;
+    height: 100%;
+    top: 0;
+    padding: 10px;
+    width: 40%;
+    opacity: 0.8;
+    right: -40%;
+    i{
+      display: block;
+      color: white;
+      width: 100%;
+      text-align: center;
+      margin-top:20px;
+    }
+    a:hover{
+      text-decoration: none;
+    }
+  }
+
+  &:hover{
+    -webkit-box-shadow: 10px 10px 5px 0 $grey-400;
+    -moz-box-shadow: 10px 10px 5px 0 $grey-400;
+    box-shadow: 10px 10px 5px 0 $grey-400;
+    .overlay {
+      right: 0;
+    }
+  }
+  &.cms-fwk{
+    border-color: $red-300;
+    background-image: url(../images/categories/cms-fwk.jpg);
+    a {
+      color: $red-300;
+    }
+    .overlay {
+      background-color: $red-300;
+    }
+
+    .title.line2 {
+      margin-left: 80px;
+    }
+    .title.line3 {
+      margin-left: 120px;
+    }
+
+  }
+  &.e-commerce {
+    border-color: $green-500;
+    background-image: url(../images/categories/ecommerce.jpg);
+    a {
+      color: $green-500;
+    }
+    .overlay {
+      background-color: $green-500;
+    }
+
+    .title.line2 {
+      margin-left: 80px;
+    }
+    .title.line3 {
+      margin-left: 120px;
+    }
+
+  }
+
+  &.blog{
+    border-color: $orange-500;
+    background-image: url(../images/categories/blog.jpg);
+    a{
+      color: $orange-500;
+    }
+    .overlay {
+      background-color: $orange-500;
+    }
+  }
+
+  &.internet-parents {
+    border-color: $blue-500;
+    background-image: url(../images/categories/internet.jpg);
+    a {
+      color: $blue-500;
+    }
+    .overlay {
+      background-color: $blue-500;
+    }
+  }
+  &.projects {
+    border-color: $red-500;
+    background-image: url(../images/categories/projects.png);
+    a{
+      color: $red-500;
+    }
+    .overlay {
+      background-color: $red-500;
+    }
+  }
+  &.programming {
+    border-color: $lila-500;
+    background-image: url(../images/categories/code.jpg);
+    a {
+      color: $white;
+    }
+    .overlay {
+      background-color: $lila-500;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+footer {
+  padding-top: 20px;
+  background-color: $grey-800;
+  color: white;
+  font-family: "robotoregular", sans-serif;
+  font-size: 1.5rem;
+  .social-icons {
+    float: right;
+    text-align: right;
+
+    a {
+      color: $grey-400;
+      height: 30px;
+      line-height: 30px;
+      margin-left: 10px;
+      width: 30px;
+    }
+
+    i {
+      background: transparent;
+      border-radius: 4px;
+      border-right: 0;
+    }
+  }
+}

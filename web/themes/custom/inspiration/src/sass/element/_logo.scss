@@ -1,0 +1,39 @@
+.logo {
+  width: 500px;
+  margin: 2rem 0 2rem;
+  a:hover {
+    text-decoration: none;
+  }
+
+  img {
+    max-width: 20%;
+  }
+
+  span {
+    color: $orange-500;
+    font-family: $font-highlight;
+
+  }
+}
+
+.sticky{
+  .logo {
+    -webkit-transform: width 1s ease-in-out;
+    -moz-transform: width 1s ease-in-out;
+    -ms-transform: width 1s ease-in-out;
+    -o-transform: width 1s ease-in-out;
+    transform: width 1s ease-in-out;
+    margin: 2rem 0 2rem;
+    width: 40%;
+  }
+  span {
+    color: $orange-500;
+    font-family: $font-highlight;
+    -webkit-transform: font-size 1s ease-in-out;
+    -moz-transform: font-size 1s ease-in-out;
+    -ms-transform: font-size 1s ease-in-out;
+    -o-transform: font-size 1s ease-in-out;
+    transform: font-size 1s ease-in-out;
+    @include font-size(40px);
+  }
+}

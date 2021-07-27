@@ -1,0 +1,19 @@
+
+.newsfeed-items {
+  padding: 0;
+  list-style-type: none;
+}
+
+.newsfeed-item {
+  padding: 32px 0;
+  list-style-type: none;
+  border-bottom: 10px solid #f0f0f0;
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+
+  &:first-of-type {
+    padding-top: 0;
+  }
+}

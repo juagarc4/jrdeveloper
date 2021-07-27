@@ -1,0 +1,43 @@
+diff --git a/src/Unstable/Controller/JsonapiResourceController.php b/src/Unstable/Controller/JsonapiResourceController.php
+index e83071b..a5a3755 100644
+--- a/src/Unstable/Controller/JsonapiResourceController.php
++++ b/src/Unstable/Controller/JsonapiResourceController.php
+@@ -10,6 +10,8 @@ use Drupal\jsonapi\ResourceResponse;
+ use Drupal\jsonapi\ResourceType\ResourceType;
+ use Drupal\jsonapi_resources\Exception\ResourceImplementationException;
+ use Drupal\jsonapi_resources\Resource\ResourceBase;
++use Drupal\search_api\Entity\Index;
++use Drupal\search_api\IndexInterface;
+ use Symfony\Component\HttpFoundation\Request;
+ use Symfony\Component\HttpKernel\Controller\ArgumentResolverInterface;
+ 
+@@ -61,6 +63,24 @@ final class JsonapiResourceController {
+   public function processRequest(Request $request, RouteMatchInterface $current_route): ResourceResponse {
+     $resource = $this->getJsonapiResource($current_route);
+     $args = $this->argumentResolver->getArguments($request, [$resource, 'process']);
++
++    /*
++     *Dirty path to fix JSON API Search API.
++     * @see: https://www.drupal.org/project/jsonapi_search_api/issues/3185656
++     */
++    if (null === $args[1]) {
++      $route_path = $current_route->getRouteObject()->getPath();
++      // if we don't change the default behavior, the path will be /jsonapi/index/index_name
++      $route_parts = explode('/', $route_path);
++
++      //the first element will be empty, the index name will be the 4 element (array_index=3)
++      if ($route_parts[2] === 'index') {
++        /** @var \Drupal\search_api\IndexInterface $search_api_index */
++        $search_api_index = Index::load($route_parts[3]);
++        $args[1] = $search_api_index;
++      }
++    }
++
+     // The process() method is guaranteed to exist because
+     // \Drupal\jsonapi_resources\Unstable\Routing\ResourceRoutes::ensureResourceImplementationValid()
+     // uses reflection to ensure that it does.
+@@ -134,3 +154,4 @@ final class JsonapiResourceController {
+   }
+ 
+ }
++

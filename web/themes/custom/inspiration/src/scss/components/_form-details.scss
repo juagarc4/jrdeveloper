@@ -1,0 +1,89 @@
+.field-group-details {
+  border-bottom: 1px solid $grey-100;
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+
+  summary {
+    padding: 16px 0;
+  }
+}
+
+.filter-help {
+  padding: 8px 0;
+  margin: 8px 0;
+}
+
+details {
+  details {
+    margin-left: 16px;
+  }
+
+  & > .details-wrapper {
+    padding: 0;
+  }
+
+  .field-label {
+    text-align: left;
+    padding: 0 0 8px;
+  }
+}
+
+form .field-multiple-table {
+  width: 100%;
+  margin: 0 0 8px;
+
+  tr.draggable {
+    background-color: #f6f6f6;
+    border-bottom: 1px solid #d3d3d3;
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+  }
+
+  td {
+    vertical-align: top;
+    padding: 0;
+  }
+
+  .delta-order {
+    width: 64px;
+  }
+
+  .field-multiple-drag {
+    margin: 0;
+    float: none;
+    padding: 0;
+    width: 32px;
+
+    .tabledrag-handle {
+      padding: 0;
+      margin: 16px 0 16px 10px;
+    }
+  }
+}
+
+a.tabledrag-handle .handle {
+  background-position: center center;
+  margin: 0;
+  padding: 0;
+  background-size: 100% 100%;
+  width: 24px;
+  height: 24px;
+}
+
+tr.odd .form-item,
+tr.even .form-item {
+  margin: 16px;
+
+  .input-label {
+    margin: 0;
+  }
+}
+
+tr.even .form-item .input-label,
+tr.odd .form-item .input-label {
+  margin-bottom: 8px;
+}
